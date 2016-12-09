@@ -2,6 +2,36 @@
 {% block main %}
 <div class="top-bar">
   <img src="img/logo.png">
+  <a href="#" data-menu-toggle class="float-right show-for-small-only"><i class="fa fa-bars"></i></a>
+</div>
+<div class="menu-small">
+  <a href="#" class="float-right" data-menu-toggle><i class="fa fa-remove"></i></a>
+  <ul class="menu">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">公司简介</a></li>
+    <li><a href="#">服务项目</a>
+      <ul class="menu__sub">
+        <li><a href="#">治未病</a></li>
+        <li><a href="#">产后护理</a></li>
+        <li><a href="#">乳房护理</a></li>
+        <li><a href="#">小儿推拿</a></li>
+        <li><a href="#">艾灸</a></li>
+      </ul>
+    </li>
+    <li><a href="#">招商合作</a></li>
+    <li><a href="#">新闻动态</a></li>
+    <li><a href="#">产品展示</a>
+      <ul class="menu__sub">
+        <li><a href="#">砭具系列</a></li>
+        <li><a href="#">经络养生</a></li>
+        <li><a href="#">乳房保养</a></li>
+        <li><a href="#">小儿保健</a></li>
+        <li><a href="#">艾灸系列</a></li>
+      </ul>
+    </li>
+    <li><a href="#">联系我们</a></li>
+    <li><a href="#">人才招聘</a></li>
+  </ul>
 </div>
 <div class="navigation">
   <ul class="menu">
@@ -31,6 +61,7 @@
     <li><a href="#">人才招聘</a></li>
   </ul>
 </div>
+<div id="main">
 <div id="banner" class="section">
   <div class="banner__container">
     <div>
@@ -44,12 +75,12 @@
   <div class="container">
     <div>
       <img src="img/title.png">
-      {% set intro = '女颐堂治未病调理中心，是一家以传统中医理念为基础，集研发、生产、销售、培训于一体，以连锁经营模式为主的女性健康养生平台。总部坐落于美丽的泉城济南，公司在山东省亚健康防控协会等相关部门的关心支持下，以大众健康产业集团为依托，经过十多年沉淀积累，于2009年正式创立女颐堂品牌，我们立足于传承中医国粹，呵护女性健康的美好愿景，本着“以防代治，以食代药，以养代医”的自然健康养生理念，在国内数名有资深经验的老中医亲自指导下，组成专业导师队伍，配合多元的诊疗手法，运用独家研制的配套产品，彻底解决女性生产后的一系列健康困扰，为中国女性打造完美的康复理念。
-      女颐堂治未病调理中心服务项目多元化，为女性不同时期出现的头痛、腰背疼痛、关节疼痛、乳房变形、疤痕、身材变形、宫寒肢冷等问题，提供更专业的，贴心的，安全的恢复治疗。同时中心专门为产后妈妈这一特殊时期，推出产后满月发汗，月子病调理，产后美颜修复、产后形体恢复、产后私密护理、产后乳房护理以及孕前调理这七大项产后妈妈金牌服务项目，结合女颐堂独家治未病技术，采用纯天然养生产品，以自然之道养自然之身，以自然之法固自然之体，以自然之体修自然之心，让天下所有女性回归本元，健康自信。' %}
-      {% for i in intro|list|slice(25) %}
-      <p>{{ i }}</p>
-      {% endfor %}
+      <div>
+      <p class="classic-chinese">            女颐堂治未病调理中心，是一家以传统中医理念为基础，集研发、生产、销售、培训于一体，以连锁经营模式为主的女性健康养生平台。总部坐落于美丽的泉城济南，公司在山东省亚健康防控协会等相关部门的关心支持下，以大众健康产业集团为依托，经过十多年沉淀积累，于2009年正式创立女颐堂品牌，我们立足于传承中医国粹，呵护女性健康的美好愿景，本着“以防代治，以食代药，以养代医”的自然健康养生理念，在国内数名有资深经验的老中医亲自指导下，组成专业导师队伍，配合多元的诊疗手法，运用独家研制的配套产品，彻底解决女性生产后的一系列健康困扰，为中国女性打造完美的康复理念。</p>
+      <p class="classic-chinese">            女颐堂治未病调理中心服务项目多元化，为女性不同时期出现的头痛、腰背疼痛、关节疼痛、乳房变形、疤痕、身材变形、宫寒肢冷等问题，提供更专业的，贴心的，安全的恢复治疗。同时中心专门为产后妈妈这一特殊时期，推出产后满月发汗，月子病调理，产后美颜修复、产后形体恢复、产后私密护理、产后乳房护理以及孕前调理这七大项产后妈妈金牌服务项目，结合女颐堂独家治未病技术，采用纯天然养生产品，以自然之道养自然之身，以自然之法固自然之体，以自然之体修自然之心，让天下所有女性回归本元，健康自信</p>
+      </div>
     </div>
+
   </div>
 </div>
 <div id="service" class="section">
@@ -69,7 +100,7 @@
   <div class="container">
     <ul>
       {% for i in range(0,4) %}
-      <li><a href="#"><div class="cover"><img src="img/news.png"></div><div class="title"><p>namenamename</p></div></a></li>
+      <li><a href="#"><div class="cover"><img src="img/news.png"></div><div class="title"><p>namenamename</p><p><span>2016/12/12</span></p></div></a></li>
       {% endfor %}
     </ul>
     <a href="#" class="more">更多</a>
@@ -105,8 +136,43 @@
     </p>
   </div>
 </div>
+</div>
 <div class="footer">
   <img src="img/logo.png">
   女颐堂 鲁A备
 </div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+  var classic_chineses = $(".classic-chinese");
+  var result = '';
+  classic_chineses.each(function(){
+    var old = $(this).html();
+    for(var i=0; i<old.length; i++){
+      result += '<span>'+old[i]+'</span>';
+    }
+    $(this).html(result);
+    result = '';
+  });
+  var result = '';
+
+
+  /** menu toggle **/
+  $("[data-menu-toggle]").on("click", function(e){
+    e.preventDefault();
+    $(".menu-small").toggle();
+    //$(".menu-small .menu").toggle();
+    $("body").toggleClass("noscroll");
+  });
+
+  /** small menu **/
+  $(".menu-small .menu").find("a").on("click", function(e){
+    e.preventDefault();
+    if($(this).siblings()){
+      $(this).siblings().slideToggle();
+    }
+  });
+});
+</script>
 {% endblock %}
